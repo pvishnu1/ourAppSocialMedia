@@ -57,3 +57,9 @@ body {
 .text-gray {
     color: #999;
 }
+
+.col-lg-12 {
+    background-image: url(../../assets/social-4.jpg);
+    background-position-x: right;
+   
+}

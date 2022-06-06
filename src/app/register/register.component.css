@@ -30,3 +30,9 @@ label {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+
+.col-md-12
+{
+  background-image: url(../../assets/social-4.jpg);
+}
+
