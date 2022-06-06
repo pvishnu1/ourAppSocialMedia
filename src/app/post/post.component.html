@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="row">
+
+	    <div class="col-md-8 col-md-offset-2">
+
+        <form *ngIf="isLoggedIn && !isPostCreated" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <h1>Create post</h1>
+          <div class="form-group">
+              <label for="title">Title <span class="require">*</span></label>
+              <input type="text" class="form-control" placeholder="Title" name="title" [(ngModel)]="form.title" required #title="ngModel"/>
+              <div class="alert bg-danger" role="alert" *ngIf="title.errors && f.submitted">
+                Title is required
+              </div>
+
+              <div class="form-group">
+                 <label for="description">Description</label>
+                 <textarea rows="5" class="form-control" name="description" [(ngModel)]="form.description"  #description="ngModel" ></textarea>
+             </div>
+
+             <div class="form-group">
+                 <p><span class="require">*</span> - required fields</p>
+             </div>
+
+             <div class="form-group">
+                 <button type="submit" class="btn btn-primary">
+                     Create
+                 </button>
+                 <button class="btn btn-default">
+                     Cancel
+                 </button>
+             </div>
+
+          </div>
+
+          <div class="form-group">
+              <div class="alert alert-danger" role="alert" *ngIf="f.submitted && anyError">
+                  Not able to create Post at this time!! Sorry for the inconvinence
+              </div>
+          </div>
+
+        </form>
+		</div>
+
+    <div class="alert alert-success" *ngIf="isPostCreated">
+        Created Post Successfully.
+    </div>
+
+	</div>
+</div>
