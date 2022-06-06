@@ -26,6 +26,7 @@ export class TimelineComponent implements OnInit {
       this.userService.getPostsForUser(userName).subscribe(
         data => {
           this.posts = data.payload;
+          console.log("this.posts "+this.posts);
         },
         err => {
 

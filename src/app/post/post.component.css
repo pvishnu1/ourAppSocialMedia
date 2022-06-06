@@ -5,10 +5,13 @@ label small {
     color: #999;
     font-weight: normal;
 }
+.gradient-custom-2 {
+/* fallback for old browsers */
+background: #fbc2eb;
 
-.container {
-   
-    background-image: url(../../assets/social-4.jpg);
-    background-position-x: right;
-   
+/* Chrome 10-25, Safari 5.1-6 */
+background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
 }
