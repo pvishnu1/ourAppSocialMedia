@@ -31,5 +31,7 @@ label {
 }
 
 .col-md-12 {
-  background-image: url(../../assets/social-4.jpg);
-}
+   /* margin:auto; */
+   background-image: url(../../assets/social-4.jpg);
+   /* background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) */
+} 

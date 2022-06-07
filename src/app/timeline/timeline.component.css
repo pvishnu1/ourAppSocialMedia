@@ -1,6 +1,7 @@
 body{
     margin-top:20px;
-    background:#DCDCDC;
+    background:#DCDCDC; 
+    /* background:#ace6ee;  */
 }
 .content {
     padding: 35px 0px;
@@ -645,4 +646,8 @@ blockquote {
 
 .pagination {
     margin: 0px;
+}
+
+.col-lg{
+    background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
 }
