@@ -32,6 +32,9 @@ export class TimelineComponent implements OnInit {
 
         }
       );
+    }else{
+      this.tokenStorage.signOut();
+      this.router.navigate(["home"]);
     }
   }
 

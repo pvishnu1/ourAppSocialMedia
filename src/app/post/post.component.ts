@@ -31,6 +31,9 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
+    }else{
+      this.tokenStorage.signOut();
+      this.router.navigate(["home"]);
     }
   }
 

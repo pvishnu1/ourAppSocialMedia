@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from '../_services/token-storage.service';
 import { UserService } from '../_services/user.service';
 import { Post } from '../models/post';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-profile',
@@ -13,20 +14,28 @@ export class ProfileComponent implements OnInit {
   userName: any = "";
 
   constructor(
+    private router: Router,
     private tokenStorage: TokenStorageService,
     private userService: UserService
   ) { }
 
   ngOnInit(): void {
-     this.userName = this.tokenStorage.getUser();
 
-     this.userService.getPostsForUser(this.userName).subscribe(
-       data => {
-         this.posts = data.payload;
-       },
-       err => {
-       }
-     );
+    if (this.tokenStorage.getToken()) {
+      this.userName = this.tokenStorage.getUser();
+
+      this.userService.getPostsForUser(this.userName).subscribe(
+        data => {
+          this.posts = data.payload;
+        },
+        err => {
+        }
+      );
+    }else{
+      this.tokenStorage.signOut();
+      this.router.navigate(["home"]);
+    }
+
   }
 
 }
