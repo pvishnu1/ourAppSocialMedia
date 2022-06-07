@@ -1,5 +1,5 @@
 <div class="col-md-12">
-    <div class="card card-container">
+    <div class="card card-container bg-info">
         <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />
         <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
             <div class="form-group">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary btn-block bg-info">
+                <button class="btn btn-primary btn-block bg-danger">
                     Login
                 </button>
             </div>

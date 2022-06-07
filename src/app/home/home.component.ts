@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  form: any = {
+      username: null,
+      password: null
+    };
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(): void {
+    alert("feedback form");
+  }
 }

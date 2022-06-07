@@ -14,6 +14,7 @@ import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { PostComponent } from './post/post.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimelineComponent } from './timeline/timeline.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     HomeComponent,
     ProfileComponent,
     PostComponent,
-    TimelineComponent
+    TimelineComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

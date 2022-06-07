@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { PostComponent } from './post/post.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'createPost', component: PostComponent },
   { path: 'timeline', component: TimelineComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'feedback', component: FeedbackComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
