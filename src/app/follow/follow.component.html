@@ -1,0 +1,31 @@
+<div class="container mt-10 ">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-6">
+                <div class="p-3 bg-white text-center">
+                    <div><img src="https://i.imgur.com/yFeV2ed.png">
+                        <h1>Grim Minds</h1>
+                    </div>
+                    <p>Follow some beautiful soul who&nbsp;<br>have some interests like you!<br><br></p>
+                    <div class="text-center text-danger" *ngIf="!followList || followList.length==0">
+                        <p >No Users Available </p>
+                         <a href="createPost">Create Post</a>
+                    </div>
+                      <div *ngFor="let follow of followList">
+                        <div class="d-flex flex-row justify-content-between align-items-center" >
+                            <div class="d-flex flex-row align-items-center"><img class="rounded-circle" src="https://i.imgur.com/I6WnkOv.jpg" width="55">
+                                <div class="d-flex flex-column align-items-start ml-2"><span class="font-weight-bold">{{follow.userName}}</span><span class="followers">{{follow.followersCount}} Followers</span></div>
+                            </div>
+                            <div class="d-flex flex-row align-items-center mt-2">
+                              <div *ngIf="!follow.following" >
+                                <button class="btn btn-outline-primary btn-sm" type="button" (click)="followUser(follow)">Follow</button>
+                              </div>
+                              <div *ngIf="follow.following" >
+                                <button class="btn btn-primary btn-sm" type="button" (click)="unFollowUser(follow)">Following</button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

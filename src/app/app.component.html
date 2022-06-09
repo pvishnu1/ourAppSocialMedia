@@ -1,8 +1,8 @@
 <div class="app">
   <nav class="navbar navbar-expand navbar-dark bg-info">
     <img src="../assets/socialmedia1.png" width="30" height="40" class="d-inline-block align-top" alt="">
-    <a href="#" *ngIf="!isLoggedIn" class="navbar-brand">Our Social Media</a>
-      <a href="timeline" *ngIf="isLoggedIn" class="navbar-brand">Our Social Media</a>
+    <a href="#" *ngIf="!isLoggedIn" class="navbar-brand">Grim Minds</a>
+      <a href="timeline" *ngIf="isLoggedIn" class="navbar-brand">Grim Minds</a>
       <a href="feedback" *ngIf="!isLoggedIn" class="navbar-brand">Feedback</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active" *ngIf="isLoggedIn">
         <li class="nav-item">
@@ -11,6 +11,11 @@
         <li class="nav-item">
           <button class="btn btn-primary btn-block bg-success nav-link" routerLink="timeline">Time Line</button>
         </li>
+
+        <li class="nav-item">
+          <button class="btn btn-primary btn-block bg-success nav-link" routerLink="followUser">Follow User</button>
+        </li>
+
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">

@@ -8,6 +8,7 @@ import { PostComponent } from './post/post.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { FollowComponent } from './follow/follow.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'timeline', component: TimelineComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'feedback', component: FeedbackComponent },
+  { path: 'followUser', component: FollowComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

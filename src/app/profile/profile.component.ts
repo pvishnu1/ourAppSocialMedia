@@ -12,6 +12,8 @@ import { Router } from "@angular/router";
 export class ProfileComponent implements OnInit {
   public posts: Post[];
   userName: any = "";
+  followersCount : number = 0;
+  followingCount : number = 0;
 
   constructor(
     private router: Router,
@@ -20,10 +22,8 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     if (this.tokenStorage.getToken()) {
       this.userName = this.tokenStorage.getUser();
-
       this.userService.getPostsForUser(this.userName).subscribe(
         data => {
           this.posts = data.payload;
@@ -31,6 +31,13 @@ export class ProfileComponent implements OnInit {
         err => {
         }
       );
+      this.userService.getFollowingCount(this.userName).subscribe(data => {
+          this.followingCount = data;
+      });
+
+      this.userService.getFollowerCount(this.userName).subscribe(data => {
+          this.followersCount = data;
+      });
     }else{
       this.tokenStorage.signOut();
       this.router.navigate(["home"]);

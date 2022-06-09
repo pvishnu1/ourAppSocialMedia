@@ -15,6 +15,7 @@ import { PostComponent } from './post/post.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimelineComponent } from './timeline/timeline.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { FollowComponent } from './follow/follow.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     ProfileComponent,
     PostComponent,
     TimelineComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    FollowComponent
   ],
   imports: [
     BrowserModule,
