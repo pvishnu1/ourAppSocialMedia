@@ -30,6 +30,7 @@ isLoggedIn = false;
             this.userService.createFeedBack(this.data.emailId,this.data.subject,this.data.description).subscribe(
               data => {
                 console.log(data);
+                  this.router.navigate(["home"]);
               },
               err => {
                 console.log(err);
