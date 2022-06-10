@@ -1,4 +1,4 @@
-<div class="container">
+<div class="gradient-custom-2">
   <div class="text-center text-danger" *ngIf="!posts || posts.length==0">
       <p >No Posts available...Create a post </p>
        <a href="createPost">Create Post</a>
@@ -6,6 +6,7 @@
   <div class="text-center text-danger" *ngIf="posts">
     <p >TimeLine</p>
   </div>
+  <div class="container">
     <div class="col-sm-2 col-md-6 col-lg-10" *ngFor="let post of posts">
       <article class="post vt-post">
            <div class="row">
@@ -37,4 +38,5 @@
            </div>
        </article>
       </div>
+    </div>   
 </div>

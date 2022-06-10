@@ -5,3 +5,9 @@ body {
 .followers {
   font-size: 12px;
 }
+
+.container {
+    
+   
+  background-image: url(../../assets/bg1.png);
+}
