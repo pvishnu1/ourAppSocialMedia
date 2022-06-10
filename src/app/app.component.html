@@ -3,7 +3,6 @@
     <img src="../assets/socialmedia1.png" width="30" height="40" class="d-inline-block align-top" alt="">
     <a href="#" *ngIf="!isLoggedIn" class="navbar-brand">Grim Minds</a>
       <a href="timeline" *ngIf="isLoggedIn" class="navbar-brand">Grim Minds</a>
-      <a href="feedback" *ngIf="!isLoggedIn" class="navbar-brand">Feedback</a>
     <ul class="navbar-nav mr-auto" routerLinkActive="active" *ngIf="isLoggedIn">
         <li class="nav-item">
             <button class="btn btn-primary btn-block bg-success nav-link" routerLink="profile">My Profile</button>
@@ -19,6 +18,9 @@
     </ul>
 
     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/feedback" *ngIf="!isLoggedIn" class="nav-link">Feedback</a>
+      </li>
       <li class="nav-item">
         <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
       </li>
