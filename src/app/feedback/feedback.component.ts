@@ -14,8 +14,8 @@ import { UserService } from '../_services/user.service';
 })
 export class FeedbackComponent implements OnInit {
 
-  public data:any={
-      emailId : "",
+  public form:any={
+      email: null,
       subject : "",
       description : ""
     }
@@ -26,8 +26,8 @@ isLoggedIn = false;
       ngOnInit(): void {
       }
 
-      save(): void {
-            this.userService.createFeedBack(this.data.emailId,this.data.subject,this.data.description).subscribe(
+      onSubmit(): void {
+            this.userService.createFeedBack(this.form.email,this.form.subject,this.form.description).subscribe(
               data => {
                 console.log(data);
                   this.router.navigate(["home"]);

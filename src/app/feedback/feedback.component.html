@@ -2,32 +2,39 @@
 <div class="gradient-custom-2" style="text-align:center">
 
     <div >
-      <div class="col-md-6 mx-auto">
-        <div class="form-area">
-          <form role="form">
-              <h1 class="well">Feedback</h1>
-            <br style="clear:both">
-            <h3 style="margin-bottom: 25px; text-align: left;"></h3>
+      <div class="col-md-5 mx-auto">
+        <div class="form-area text-left">
+          <h1 class="well text-info">Feedback</h1>
+          <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate >
             <div class="form-group">
-              <label for="emailId" class="float-left form-label text-left">Email*</label>
+              <label for="email">Email*</label>
+              <input type="email" class="form-control" name="email" placeholder="email" [(ngModel)]="form.email" required email #email="ngModel"/>
+              <div class="alert bg-danger" *ngIf="email.errors && f.submitted">
+                <div *ngIf="email.errors.required">Email is required</div>
+                <div *ngIf="email.errors.email">
+                  Email must be a valid email address
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject*</label>
+              <input type="text" class="form-control" name="subject" placeholder="Subject" [(ngModel)]="form.subject" required subject #subject="ngModel"/>
+              <div class="alert bg-danger" *ngIf="subject.errors && f.submitted">
+                <div *ngIf="subject.errors.required">Subject is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description*</label>
               <div class="float-left form-input-wrapper">
-                <input  type="email" class="form-control" name="emailId" id="emailId" placeholder="Email" [(ngModel)]="data.emailId" required emailId #emailId="ngModel"/>
+                      <textarea class="form-control" type="description" id="description" name="description" placeholder="Description" [(ngModel)]="form.description" maxlength="140" rows="7"></textarea>
+              </div>
             </div>
-            </div>
+
             <div class="form-group">
-                <label for="email" class="float-left form-label text-left">Subject*</label>
-                <div class="float-left form-input-wrapper">
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" [(ngModel)]="data.subject" required>
-                    </div>
+              <button class="btn btn-primary btn-block bg-info pull-left mr-3">Submit</button>
             </div>
-            <div class="form-group">
-                <label for="email" class="float-left form-label text-left">Description*</label>
-                <div class="float-left form-input-wrapper">
-                    <textarea class="form-control" type="description" id="description" name="description" placeholder="Description" [(ngModel)]="data.description" maxlength="140" rows="7"></textarea>
-            </div>
-                  </div>
-            <button type="button" id="submit" name="submit" class="btn btn-primary pull-left mr-3" (click)="save()">Submit</button>
-            <button type="button" id="cancel" name="cancel" class="btn btn-primary pull-left" (click)="cancel()">Cancel</button>
 
           </form>
         </div>

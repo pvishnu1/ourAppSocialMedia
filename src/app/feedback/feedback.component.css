@@ -1,6 +1,6 @@
 .float-left.form-input-wrapper {
-    width: 78%;
-    margin: 0px 15px 11px;
+    width: 100%;
+    margin: 0px 0px 14px;
 }
 .form-label {
     width : 15%;
@@ -15,10 +15,10 @@
 .gradient-custom-2 {
     /* fallback for old browsers */
     background: #fbc2eb;
-    
+
     /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
-    
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
     }
